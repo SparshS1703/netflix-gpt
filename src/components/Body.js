@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, useNavigate } from "react-router-dom";
 import Login from "./Login"
 import Browse from "./Browse";
 
@@ -8,6 +8,8 @@ import Browse from "./Browse";
 
 
 const Body=()=>{
+    
+    
 
     const appRouter=createBrowserRouter([
         {
@@ -19,9 +21,10 @@ const Body=()=>{
             element:<Browse />
         }
     ])
+    
 
     return (
-        <div>
+        <div className="w-screen">
            <RouterProvider router={appRouter} />
         </div>
     )
